@@ -5,9 +5,7 @@ const Navbar = () => {
   return (
     <nav className={styles.nav}>
       <div>
-        <Link to="/" className={styles.logo}>
-          Northwind
-        </Link>
+        <p className={styles.logo}>Northwind</p>
       </div>
       <div>
         <Link to="/">Home</Link>
@@ -19,7 +17,7 @@ const Navbar = () => {
         <Link to="/product">Product</Link>
       </div>
       <div>
-        <Link to="/card">Cart</Link>
+        <Link to="/cart">Cart</Link>
       </div>
     </nav>
   );

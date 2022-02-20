@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
-const Card = () => {
-  return <div className={styles.center}>Card</div>;
+const Cart = () => {
+  return <div className={styles.center}>Cart</div>;
 };
 
-export default Card;
+export default Cart;
