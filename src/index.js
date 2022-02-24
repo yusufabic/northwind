@@ -3,6 +3,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { render } from "react-dom";
 import App from "./App";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const queryClient = new QueryClient({
   defaultOptions: {
