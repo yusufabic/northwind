@@ -5,11 +5,7 @@ import "./styles.css";
 const Card = ({ item }) => {
   return (
     <div className="card">
-      <img
-        src="https://picsum.photos/200"
-        className="card-img-top"
-        alt={item.title}
-      />
+      <img src={item.imageUrl} className="card-img-top" alt={item.title} />
       <div className="card-body">
         <h5 className="card-title">{item.title}</h5>
         <h2>{item.price}</h2>
@@ -18,7 +14,7 @@ const Card = ({ item }) => {
             Detail
           </button>
           <span>|</span>
-          <Link to="#/" className="link">
+          <Link to={`/product/${item.id}`} className="link">
             Detail
           </Link>
         </div>

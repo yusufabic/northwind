@@ -1,0 +1,7 @@
+.center {
+  height: 600px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: 10rem;
+}
