@@ -1,0 +1,8 @@
+.remove {
+  display: flex;
+  justify-content: start;
+}
+.remove svg {
+  margin-top: 2.5rem;
+  cursor: pointer;
+}

@@ -1,0 +1,31 @@
+.item,
+.item-img {
+  width: 120px;
+  height: 180px;
+  border-radius: 5px;
+}
+
+.item {
+  margin: 20px 15px 5px 15px;
+}
+.plus {
+  width: 1rem;
+  cursor: pointer;
+}
+
+.minus {
+  width: 1rem;
+  cursor: pointer;
+}
+.visibility {
+  visibility: hidden;
+}
+.quantity {
+  width: 10;
+}
+
+.remove img {
+  width: 1.5rem;
+  height: 20px;
+  cursor: pointer;
+}
