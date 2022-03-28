@@ -1,14 +1,14 @@
 import React from "react";
 import "./styles.css";
 
-const Detail = ({ product }) => {
+const Detail = ({ product, addToCart }) => {
   return (
-    <div className="detail-container ">
-      <div className="detail ">
-        <div className="img-container ">
-          <img src={product.imageUrl} alt="" />
+    <div className="detail-container">
+      <div className="detail">
+        <div className="img-container">
+          <img src={product.imageUrl} alt={product.title} />
         </div>
-        <div className="table-continer ">
+        <div className="table-continer">
           <table>
             <tr>
               <td>ID</td>
@@ -42,7 +42,9 @@ const Detail = ({ product }) => {
         </div>
       </div>
       <div className="button">
-        <button className="btn btn-primary ">Add to basket</button>
+        <button className="btn btn-primary" onClick={() => addToCart(product)}>
+          Add To Cart
+        </button>
       </div>
     </div>
   );

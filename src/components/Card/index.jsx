@@ -19,9 +19,9 @@ const Card = ({ item }) => {
         <h2>{item.price}</h2>
         <div className="d-flex justify-content-between">
           <button
+            className="btn btn-primary btn-sm"
             onClick={() => onClick(item)}
             type="button"
-            className="btn btn-primary btn-sm"
           >
             Detail
           </button>

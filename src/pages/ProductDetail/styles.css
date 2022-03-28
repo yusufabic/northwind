@@ -1,0 +1,15 @@
+.alert-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.alert-block {
+  display: block;
+  width: 300px;
+  margin-right: 20px;
+  margin-top: 1rem;
+}
+.alert-none {
+  display: none;
+}

@@ -35,11 +35,6 @@ const Products = () => {
     <section className="row">
       <div className="col-3">
         <ul className="list-group">
-          <ListGroup
-            item={{ id: 0, name: "All" }}
-            onClick={(param) => setSelectedCategory(param)}
-            selectedCategory={selectedCategory}
-          />
           {categories.map((item, key) => {
             return (
               <ListGroup
@@ -53,7 +48,7 @@ const Products = () => {
         </ul>
       </div>
       <div className="col-9">
-        <div className="row row-cols-4">
+        <div className="row row-col-4">
           {selectedProducts.map((item, i) => (
             <div key={i} className="col">
               <Card item={item} />

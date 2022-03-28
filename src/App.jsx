@@ -7,11 +7,13 @@ import Products from "./pages/Products";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import ProductDetail from "./pages/ProductDetail";
+import Notification from "./components/Notification";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
+      <Notification />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/products" component={Products} />

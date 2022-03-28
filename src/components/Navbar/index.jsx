@@ -1,12 +1,20 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 import "./styles.css";
 
 const Navbar = () => {
+  const { cart } = useSelector((state) => state.cart);
+  const [totalItem, setTotalItem] = useState(0);
+
+  useEffect(() => {
+    setTotalItem(cart.reduce((total, item) => total + item.quantity, 0));
+  }, [cart]);
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#/">
-          Northwind
-        </a>
+        <div className="navbar-brand">Northwind</div>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,24 +29,14 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
-                Home
-              </a>
+              <Link to="/home">Home</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/products">
-                Products
-              </a>
+              <Link to="/products">Products</Link>
             </li>
+
             <li className="nav-item">
-              <a className="nav-link" href="/product">
-                Product
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link  " href="/cart">
-                Cart
-              </a>
+              <Link to="/cart">Cart/{totalItem} </Link>
             </li>
           </ul>
         </div>
