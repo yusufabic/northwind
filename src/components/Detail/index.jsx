@@ -3,8 +3,8 @@ import "./styles.css";
 
 const Detail = ({ product, addToCart }) => {
   return (
-    <div className="detail-container">
-      <div className="detail">
+    <div id="detail">
+      <div className="detail-container">
         <div className="img-container">
           <img src={product.imageUrl} alt={product.title} />
         </div>

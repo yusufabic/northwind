@@ -2,12 +2,14 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Notification from "./components/Notification";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import ProductDetail from "./pages/ProductDetail";
-import Notification from "./components/Notification";
+import Management from "./pages/Management";
+import Edit from "./pages/Edit";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
         <Route path="/detail" component={ProductDetail} />
         <Route path="/product/:product_id" component={Product} />
         <Route path="/cart" component={Cart} />
+        <Route path="/management" component={Management} />
+        <Route path="/edit" component={Edit} />
       </Switch>
       <Footer />
     </BrowserRouter>
