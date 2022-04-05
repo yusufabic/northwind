@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-
 import "./styles.css";
 
 const Navbar = () => {
@@ -11,6 +10,7 @@ const Navbar = () => {
   useEffect(() => {
     setTotalItem(cart.reduce((total, item) => total + item.quantity, 0));
   }, [cart]);
+
   return (
     <nav className="navbar navbar-expand navbar-light bg-light">
       <div className="container-fluid">
@@ -34,7 +34,9 @@ const Navbar = () => {
             <li className="nav-item">
               <Link to="/products">Products</Link>
             </li>
-
+            <li className="nav-item">
+              <Link to="/management">Management</Link>
+            </li>
             <li className="nav-item">
               <Link to="/cart">Cart/{totalItem} </Link>
             </li>
