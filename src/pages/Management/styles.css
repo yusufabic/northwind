@@ -1,6 +1,6 @@
 #management table {
   background-color: #f8f8ff;
-  border: 3px solid gray;
+
   max-width: none;
 }
 
@@ -10,6 +10,7 @@
 #management .search input {
   max-width: 500px;
 }
+
 #management table tr {
   color: black;
 }

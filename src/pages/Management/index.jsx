@@ -39,30 +39,49 @@ const Management = () => {
 
   return (
     <section id="management">
-      <div className="input-group mb-3 search">
-        <span className="input-group-text my-3">Search Product</span>
-        <input
-          type="text"
-          className="form-control my-3"
-          id="basic-url"
-          placeholder="Type Product Name"
-          value={filterText}
-          onChange={(e) =>
-            setFilterText(e.target.value.toString().toLowerCase())
-          }
-        />
+      <div className="d-flex justify-content-between align-items-baseline">
+        <div className="w-75">
+          <div className="input-group mb-3 search">
+            <span className="input-group-text my-3 bg-primary text-white">
+              Search Product
+            </span>
+            <input
+              type="text"
+              className="form-control my-3"
+              id="basic-url"
+              placeholder="Type Product Name"
+              value={filterText}
+              onChange={(e) =>
+                setFilterText(e.target.value.toString().toLowerCase())
+              }
+            />
+          </div>
+        </div>
+        <div className="w-25">
+          <div className="add-btn">
+            <Link to="/addproduct" type="button" className="btn btn-primary">
+              Add Product
+            </Link>
+          </div>
+        </div>
       </div>
 
       <br />
-      <table className="table table-hover">
+      <table className="table table-hover table-striped">
         <thead>
           <tr>
-            <th className="text-center border border-dark">Product İd</th>
-            <th className="text-center border border-dark">Product Title</th>
-            <th className="text-center border border-dark">Price</th>
-            <th className="text-center border border-dark">Upload Date</th>
-            <th className="text-center border border-dark">Edit</th>
-            <th className="text-center border border-dark">Remove</th>
+            <th className="text-center  border  bg-primary text-white">
+              Product İd
+            </th>
+            <th className="text-center border   bg-primary text-white">
+              Product Title
+            </th>
+            <th className="text-center border bg-primary text-white">Price</th>
+            <th className="text-center border bg-primary text-white">
+              Upload Date
+            </th>
+            <th className="text-center border bg-primary text-white">Edit</th>
+            <th className="text-center border bg-primary text-white">Remove</th>
           </tr>
         </thead>
         <tbody>
