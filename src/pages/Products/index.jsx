@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { setSelectedProduct } from "../../store/product";
 import { fetchProductList, fetchCategories } from "../../services";
 import Card from "../../components/Card";
 import ListGroup from "../../components/ListGroup";
@@ -9,6 +12,13 @@ const Products = () => {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [selectedProducts, setSelectedProducts] = useState([]);
+
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const onClick = (item) => {
+    dispatch(setSelectedProduct(item));
+    history.push("/detail");
+  };
 
   useEffect(() => {
     fetchProductList().then((result) => {
@@ -32,7 +42,7 @@ const Products = () => {
   }, [selectedCategory]);
 
   return (
-    <section className="row">
+    <section id="products" className="page row">
       <div className="col-3">
         <ul className="list-group">
           {categories.map((item, key) => {
@@ -51,7 +61,7 @@ const Products = () => {
         <div className="row row-col-4">
           {selectedProducts.map((item, i) => (
             <div key={i} className="col">
-              <Card item={item} />
+              <Card item={item} onClick={(item) => onClick(item)} />
             </div>
           ))}
         </div>

@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setEditProduct } from "../../store/edit";
+import { Link, useHistory } from "react-router-dom";
 import { fetchProductList, deleteProduct } from "../../services";
 import "./styles.css";
 
@@ -9,6 +11,13 @@ const Management = () => {
   const [selectedProduct, setSelectedProduct] = useState({});
   const [showPopup, setShowPopup] = useState(false);
   const [filterText, setFilterText] = useState("");
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const onClick = (editProduct) => {
+    dispatch(setEditProduct(editProduct));
+    history.push("/edit");
+  };
 
   useEffect(() => {
     fetchProductList().then((result) => {
@@ -38,7 +47,7 @@ const Management = () => {
   };
 
   return (
-    <section id="management">
+    <section id="management" className="page">
       <div className="d-flex justify-content-between align-items-baseline">
         <div className="w-75">
           <div className="input-group mb-3 search">
@@ -59,7 +68,7 @@ const Management = () => {
         </div>
         <div className="w-25">
           <div className="add-btn">
-            <Link to="/addproduct" type="button" className="btn btn-primary">
+            <Link to="/add" type="button" className="btn btn-primary">
               Add Product
             </Link>
           </div>
@@ -94,9 +103,12 @@ const Management = () => {
                 {new Date(Date(item.date)).toISOString().substring(0, 10)}
               </td>
               <td className="text-center">
-                <Link to="/edit" className="text-decoration-none text-dark">
-                  <img className="update-img" src="/update.svg" alt="" />
-                </Link>
+                <img
+                  className="update-img"
+                  src="/update.svg"
+                  alt=""
+                  onClick={() => onClick(item)}
+                />
               </td>
               <td className="text-center">
                 <img
@@ -116,11 +128,11 @@ const Management = () => {
       <br />
 
       {showPopup && (
-        <div className="popup">
-          <h5 className="text-danger">Are you sure?</h5>
-          <p className="text-danger">{selectedProduct.title} will be deleted</p>
+        <div className="popup border border-white">
+          <h5 className="text-dark">Are you sure?</h5>
+          <p className="text-dark">{selectedProduct.title} will be deleted</p>
           <button
-            className="yes"
+            className="yes bg-primary text-white border border-white"
             onClick={() => {
               remove(selectedProduct);
               setShowPopup(false);
@@ -128,7 +140,10 @@ const Management = () => {
           >
             Yes
           </button>
-          <button className="no" onClick={() => setShowPopup(false)}>
+          <button
+            className="no bg-primary text-white border border-white"
+            onClick={() => setShowPopup(false)}
+          >
             No
           </button>
         </div>

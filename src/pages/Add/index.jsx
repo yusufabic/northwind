@@ -1,11 +1,10 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import { UpdateProduct } from "../../services";
-import { useSelector } from "react-redux";
+import { postProduct } from "../../services";
 import "./styles.css";
 
-const EditValidations = Yup.object().shape({
+const AddValidations = Yup.object().shape({
   title: Yup.string().required("Required field!"),
   description: Yup.string().required("Required field!"),
   price: Yup.number("Price information should consist of numbers!")
@@ -27,26 +26,22 @@ const EditValidations = Yup.object().shape({
     .required("Required field!"),
 });
 
-const EditProduct = () => {
-  const { editProduct } = useSelector((state) => state.edit);
-
+const AddProduct = () => {
   return (
-    <section id="edit" className="page container">
+    <section id="add" className="page container">
       <Formik
         initialValues={{
-          id: editProduct.id,
-          title: editProduct.title,
-          description: editProduct.description,
-          price: editProduct.price,
-          star: editProduct.star,
-          imageUrl: editProduct.imageUrl,
-          image1: editProduct.image1,
-          image2: editProduct.image2,
+          title: "",
+          description: "",
+          price: "",
+          star: "",
+          imageUrl: "",
+          image1: "",
+          image2: "",
         }}
-        validationSchema={EditValidations}
+        validationSchema={AddValidations}
         onSubmit={(values) => {
           const newProduct = {
-            id: values.id,
             title: values.title,
             price: values.price,
             description: values.description,
@@ -54,10 +49,10 @@ const EditProduct = () => {
             imageUrl: values.imageUrl,
             images: [values.image1, values.image2],
           };
-          UpdateProduct(newProduct, newProduct.id);
+          postProduct(newProduct);
         }}
       >
-        {({ errors, touched, values }) => (
+        {({ errors, touched }) => (
           <Form>
             <div>Title</div>
             <Field name="title" type="text" className="form-control" />
@@ -70,42 +65,42 @@ const EditProduct = () => {
             <Field name="description" type="text" className="form-control" />
             <div className="error">
               {errors.description && touched.description ? (
-                <div className="text-danger">{errors.description}</div>
+                <div className="text-danger w-75">{errors.description}</div>
               ) : null}
             </div>
             <div>Price</div>
             <Field name="price" className="form-control" />
             <div className="error">
               {errors.price && touched.price ? (
-                <div className="text-danger">{errors.price}</div>
+                <div className="text-danger w-75">{errors.price}</div>
               ) : null}
             </div>
             <div>Star</div>
             <Field name="star" className="form-control" />
             <div className="error">
               {errors.star && touched.star ? (
-                <div className="text-danger">{errors.star}</div>
+                <div className="text-danger w-75">{errors.star}</div>
               ) : null}
             </div>
             <div>Image</div>
             <Field name="imageUrl" className="form-control" />
             <div className="error">
               {errors.imageUrl && touched.imageUrl ? (
-                <div className="text-danger">{errors.imageUrl}</div>
+                <div className="text-danger w-75">{errors.imageUrl}</div>
               ) : null}
             </div>
             <div>Image 1</div>
             <Field name="image1" className="form-control" />
             <div className="error">
               {errors.image1 && touched.image1 ? (
-                <div className="text-danger">{errors.image1}</div>
+                <div className="text-danger  w-75">{errors.image1}</div>
               ) : null}
             </div>
             <div>Image 2</div>
             <Field name="image2" className="form-control" />
             <div className="error">
               {errors.image2 && touched.image2 ? (
-                <div className="text-danger">{errors.image2}</div>
+                <div className="text-danger w-75">{errors.image2}</div>
               ) : null}
             </div>
             <button type="submit" className="btn btn-primary my-2">
@@ -117,4 +112,4 @@ const EditProduct = () => {
     </section>
   );
 };
-export default EditProduct;
+export default AddProduct;

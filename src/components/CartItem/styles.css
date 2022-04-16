@@ -1,8 +1,10 @@
 .item,
 .item-img {
-  width: 120px;
-  height: 180px;
-  border-radius: 5px;
+  width: 25%;
+  height: auto;
+  max-height: 150px;
+  padding: 0;
+  margin: 0;
 }
 
 .item {
@@ -21,7 +23,7 @@
   visibility: hidden;
 }
 .quantity {
-  width: 10;
+  width: 10px;
 }
 
 .remove img {
