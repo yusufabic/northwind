@@ -1,8 +1,12 @@
 import React from "react";
-import styles from "./styles.css";
+import "./styles.css";
 
 const Home = () => {
-  return <div className={styles.center}>Home</div>;
+  return (
+    <section id="home" className="page container">
+      Home
+    </section>
+  );
 };
 
 export default Home;

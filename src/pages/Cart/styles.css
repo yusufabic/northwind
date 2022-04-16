@@ -1,6 +1,6 @@
 .remove {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .remove svg {
   margin-top: 2.5rem;

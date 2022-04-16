@@ -1,16 +1,8 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setSelectedProduct } from "../../store/product";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
-const Card = ({ item }) => {
-  const dispatch = useDispatch();
-  const history = useHistory();
-  const onClick = (item) => {
-    dispatch(setSelectedProduct(item));
-    history.push("/detail");
-  };
+const Card = ({ item, onClick }) => {
   return (
     <div className="card">
       <img src={item.imageUrl} className="card-img-top" alt={item.title} />

@@ -14,12 +14,12 @@ const ProductDetail = () => {
   };
 
   return (
-    <div>
+    <section id="productDetail" className="page center">
       <Detail
         product={selectedProduct}
         addToCart={(param) => _addToCart(param)}
       />
-    </div>
+    </section>
   );
 };
 

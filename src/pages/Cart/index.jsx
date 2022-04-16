@@ -16,7 +16,7 @@ const Cart = () => {
   }, [cart]);
 
   return (
-    <div className="container px-4 py-5 mx-auto">
+    <section id="cart" className="page container px-4 py-5 mx-auto">
       <div className="row d-flex justify-content-center">
         <div className="col-5">
           <h4 className="heading">Shopping Cart</h4>
@@ -52,7 +52,7 @@ const Cart = () => {
       <div className="d-flex justify-content-end border-top py-3">
         <h6>Total Price : {totalPrice} </h6>
       </div>
-    </div>
+    </section>
   );
 };
 
