@@ -17,11 +17,12 @@ const Carousel = ({ slides }) => {
     <div className="carousel">
       {slides.map((slide, index) => {
         return (
-          <div key={index}>
-            {index === current && (
-              <img className="carousel-image" src={slide} alt="images" />
-            )}
-          </div>
+          <img
+            key={index}
+            className={`${index === current ? "d-block" : "d-none"}`}
+            src={slide}
+            alt="images"
+          />
         );
       })}
 
