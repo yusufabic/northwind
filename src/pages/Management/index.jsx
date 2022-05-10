@@ -11,6 +11,7 @@ const Management = () => {
   const [selectedProduct, setSelectedProduct] = useState({});
   const [showPopup, setShowPopup] = useState(false);
   const [filterText, setFilterText] = useState("");
+
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -23,6 +24,7 @@ const Management = () => {
     fetchProductList().then((result) => {
       setProducts(result.data);
       setFilteredProducts(result.data);
+      console.log("YA ~ result.data", result.data);
     });
   }, []);
 
