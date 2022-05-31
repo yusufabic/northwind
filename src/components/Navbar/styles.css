@@ -1,3 +1,18 @@
 .navbar-brand .nav-link {
   padding: 0;
 }
+.nav-colour {
+  background-color: #333333;
+}
+.nav-link {
+  color: #e3e3e3 !important;
+}
+@media only screen and (max-width: 395px) {
+  .navbar-brand img {
+    width: 120px;
+    height: auto;
+  }
+  .nav-link {
+    font-size: 13px;
+  }
+}
