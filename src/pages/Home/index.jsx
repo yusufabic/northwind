@@ -4,57 +4,73 @@ const Home = () => {
   return (
     <main id="home" className="home-page">
       <section>
-        <div className="row text-center color-gray">
-          <div className="col-12 mt-5 pt-3 text-center">
-            <span className="violator-frameless mt-5">Yeni</span>
+        <div className="row text-center color-back-g">
+          <div className="mt-5 text-center">
+            <span className="mt-5">Yeni</span>
             <h2>iPhone SE</h2>
-            <h3 className="subhead">It's not hard to reach this power</h3>
+            <h3>It's not hard to reach this power</h3>
           </div>
-          <div className="iphone-se col-12 d-flex justify-content-center">
-            <figure className="iphone-se-img"></figure>
-          </div>
-        </div>
-        <div className="row text-center color-gray mt-2">
-          <div className="col-12 text-center mt-5 pt-3">
-            <h2>iPad</h2>
-            <h3>Light. Colorful. Alone in strength.</h3>
-          </div>
-          <div className="ipad col-12">
-            <figure className="ipad-img"></figure>
-          </div>
-        </div>
-      </section>
-      <section className=" last-part mt-2">
-        <div className="row color-dark">
-          <div className="col col-md-4 col-sm-12 d-flex flex-column justify-content-center align-items-center">
-            <h2 className="mac">MacBook</h2>
-            <h3 className="mac">As powerful as your imagination.</h3>
-          </div>
-          <div className="col-12 col-md-8 p-3">
+          <div>
             <img
-              src="https://imageio.forbes.com/specials-images/imageserve/61086ec373551e86331910e3/Apple-Product-Studio-Shoot/960x0.jpg?format=jpg&width=960"
-              alt=""
-              className="w-100"
+              className="w-75"
+              src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhoneSE-double-infinity-220308_Full-Bleed-Image.jpg.slideshow-xlarge.jpg"
+              alt="iphone-se"
             />
           </div>
         </div>
-        <div className="row p-2">
-          <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
-            <div className="text-center w-100 dark-gray">
-              <h2 className="mt-5">WATCH</h2>
-              <h3>The biggest screen until the today.</h3>
-            </div>
-            <div className="watch dark-gray">
-              <figure className="watch-img"></figure>
+        <div className="row color-back-g mt-1">
+          <div className="text-center mt-5">
+            <h2>iPad</h2>
+            <h3>Light. Colorful. Alone in strength.</h3>
+          </div>
+          <div>
+            <img
+              className="ipad-img"
+              src="https://www.apple.com/newsroom/images/product/ipad/standard/apple_new-ipad-air_green_09152020_carousel.jpg.large.jpg"
+              alt="ipad"
+            />
+          </div>
+        </div>
+      </section>
+      <section className="mt-1">
+        <div className="row color-back-d">
+          <div className="col-md-4 d-flex flex-column align-items-center justify-content-center">
+            <h2 className="color-font-g text-center">MacBook</h2>
+            <h3 className="color-font-g text-center">
+              As powerful as your imagination.
+            </h3>
+          </div>
+          <div className="col-md-8">
+            <img
+              src="https://imageio.forbes.com/specials-images/imageserve/61086ec373551e86331910e3/Apple-Product-Studio-Shoot/960x0.jpg?format=jpg&width=960"
+              alt=""
+              className="macbook-img w-100"
+            />
+          </div>
+        </div>
+        <div className="row p-0 mt-1">
+          <div className="col-sm-6">
+            <div className="device-card">
+              <h2 className="text-center">WATCH</h2>
+              <h3 className="text-center">
+                The biggest screen until the today.
+              </h3>
+              <img
+                src="https://www.apple.com/tr/apple-watch-se/images/overview/swim/water__cnq38qvnj9jm_large.jpg"
+                alt="apple watch"
+                className="text-center responsive"
+              />
             </div>
           </div>
-          <div className="dark-gray col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
-            <div className="dark-gray text-center">
-              <h2 className="mt-5">AirTag</h2>
-              <h3>Your losing habit disappears.</h3>
-            </div>
-            <div className="airtag dark-gray d-flex flex-column justify-content-center align-items-center">
-              <figure className="airtag-img"></figure>
+          <div className="col-sm-6">
+            <div className="device-card">
+              <h2 className="text-center">AirTag</h2>
+              <h3 className="text-center">Your losing habit disappears.</h3>
+              <img
+                src="https://st-troy.mncdn.com/mnresize/800/800/Content/media/ProductImg/original/637575062252471204.jpg?q=100"
+                alt=""
+                className="text-center responsive"
+              />
             </div>
           </div>
         </div>
