@@ -5,12 +5,12 @@ const Home = () => {
     <main id="home" className="home-page">
       <section>
         <div className="row text-center color-back-g">
-          <div className="mt-5 text-center">
+          <div className="mt-5 text-center p-0">
             <span className="mt-5">Yeni</span>
             <h2>iPhone SE</h2>
             <h3>It's not hard to reach this power</h3>
           </div>
-          <div>
+          <div className="p-0">
             <img
               className="w-75"
               src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhoneSE-double-infinity-220308_Full-Bleed-Image.jpg.slideshow-xlarge.jpg"
@@ -34,7 +34,7 @@ const Home = () => {
       </section>
       <section className="mt-1">
         <div className="row color-back-d">
-          <div className="col-md-4 d-flex flex-column align-items-center justify-content-center">
+          <div className="col-lg-4 d-flex flex-column align-items-center justify-content-center">
             <h2 className="color-font-g text-center">MacBook</h2>
             <h3 className="color-font-g text-center">
               As powerful as your imagination.
@@ -44,12 +44,12 @@ const Home = () => {
             <img
               src="https://imageio.forbes.com/specials-images/imageserve/61086ec373551e86331910e3/Apple-Product-Studio-Shoot/960x0.jpg?format=jpg&width=960"
               alt=""
-              className="macbook-img w-100"
+              className="responsive-mac"
             />
           </div>
         </div>
-        <div className="row p-0 mt-1">
-          <div className="col-sm-6">
+        <div className="row p-1">
+          <div className="col-md-6 p-1">
             <div className="device-card">
               <h2 className="text-center">WATCH</h2>
               <h3 className="text-center">
@@ -62,7 +62,7 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="col-sm-6">
+          <div className="col-md-6 p-1">
             <div className="device-card">
               <h2 className="text-center">AirTag</h2>
               <h3 className="text-center">Your losing habit disappears.</h3>

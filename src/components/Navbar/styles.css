@@ -1,18 +1,36 @@
+.nav-color {
+  background-color: #333333;
+}
+.navbar {
+  font-size: 16px;
+}
 .navbar-brand .nav-link {
   padding: 0;
 }
-.nav-colour {
-  background-color: #333333;
+.navbar-brand img {
+  width: 9em;
+  height: auto;
 }
+
 .nav-link {
   color: #e3e3e3 !important;
 }
-@media only screen and (max-width: 395px) {
+@media only screen and (max-width: 734px) {
   .navbar-brand img {
-    width: 120px;
+    width: 7em;
     height: auto;
   }
   .nav-link {
-    font-size: 13px;
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar-brand img {
+    width: 5em;
+    height: auto;
+  }
+  .nav-link {
+    font-size: 0.6em;
   }
 }

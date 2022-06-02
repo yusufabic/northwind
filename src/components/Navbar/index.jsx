@@ -3,7 +3,7 @@ import "./styles.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand nav-colour">
+    <nav className="navbar p-0 navbar-expand nav-color">
       <div className="container-fluid">
         <div className="navbar-brand">
           <Link to="/" className="nav-link">
