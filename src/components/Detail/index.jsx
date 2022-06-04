@@ -12,7 +12,7 @@ const Detail = ({ product, addToCart }) => {
           )}
         </div>
         <div className="table-continer pt-3 rounded col-md-7">
-          <table class="table table-striped table-dark">
+          <table className="table table-striped table-dark">
             <tr>
               <td className="bg-primary text-white border border-white text-center">
                 ID

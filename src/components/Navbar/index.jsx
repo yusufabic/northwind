@@ -22,7 +22,7 @@ const Navbar = () => {
                 Management
               </Link>
             </li>
-            <li className="nav-item pe-3">
+            <li className="nav-item">
               <Link to="/cart" className="nav-link">
                 Cart
               </Link>

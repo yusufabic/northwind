@@ -58,9 +58,9 @@ const Products = () => {
         </ul>
       </div>
       <div className="col-9">
-        <div className="row row-col-4">
+        <div className="row">
           {selectedProducts.map((item, i) => (
-            <div key={i} className="col">
+            <div key={i} className="col card-product">
               <Card item={item} onClick={(item) => onClick(item)} />
             </div>
           ))}

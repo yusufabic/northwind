@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <main id="home" className="home-page">
       <section>
-        <div className="row text-center color-back-g">
+        <div className="row text-center color-back-g pointer">
           <div className="mt-5 text-center p-0">
             <span className="mt-5">Yeni</span>
             <h2>iPhone SE</h2>
@@ -18,6 +18,7 @@ const Home = () => {
             />
           </div>
         </div>
+
         <div className="row color-back-g mt-1">
           <div className="text-center mt-5">
             <h2>iPad</h2>
@@ -48,7 +49,7 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="row p-1">
+        <div className="row mt-1">
           <div className="col-md-6 p-1">
             <div className="device-card">
               <h2 className="text-center">WATCH</h2>
