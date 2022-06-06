@@ -7,12 +7,12 @@ import Card from "../../components/Card";
 import ListGroup from "../../components/ListGroup";
 import "./styles.css";
 
-const Products = () => {
+const Products = (props) => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [selectedProducts, setSelectedProducts] = useState([]);
-
+  const { id } = props.location.state;
   const dispatch = useDispatch();
   const history = useHistory();
   const onClick = (item) => {
@@ -41,6 +41,12 @@ const Products = () => {
     }
   }, [selectedCategory]);
 
+  useEffect(() => {
+    if (id) {
+      setSelectedCategory(id);
+    }
+  }, [id]);
+
   return (
     <section id="products" className="page row">
       <div className="col-3">
@@ -58,9 +64,9 @@ const Products = () => {
         </ul>
       </div>
       <div className="col-9">
-        <div className="row row-col-4">
+        <div className="row">
           {selectedProducts.map((item, i) => (
-            <div key={i} className="col">
+            <div key={i} className="col card-product">
               <Card item={item} onClick={(item) => onClick(item)} />
             </div>
           ))}

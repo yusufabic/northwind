@@ -1,0 +1,121 @@
+#home {
+  font-size: 16px;
+}
+.pointer {
+  cursor: pointer;
+}
+
+.bg-gray {
+  background-color: #fafafa;
+}
+.text-gray {
+  color: #fafafa;
+  text-decoration: none;
+}
+
+.bg-black {
+  background-color: #080808;
+}
+
+div > span {
+  font-size: 1.3em;
+  font-weight: 600;
+  line-height: 1.4em;
+  letter-spacing: 0.011em;
+  color: #1d1d1f;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+div > h2 {
+  font-size: 3em;
+  font-weight: 600;
+  line-height: 1.08em;
+  color: #1d1d1f;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+div > h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.08em;
+  color: #1d1d1f;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+.link-home {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #2488ff;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.link-home:hover {
+  text-decoration: underline;
+  color: #2488ff;
+}
+.home-svg {
+  width: 0.55em;
+  height: auto;
+  margin-left: 0.3em;
+}
+
+.ipad-img {
+  width: 50%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  height: 30em;
+  object-fit: cover;
+  object-position: 50% 10%;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  max-height: 400px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.responsive-mac {
+  width: 100%;
+  height: auto;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.device-card {
+  height: 600px;
+  background-color: #f5f5f7;
+  padding-top: 3em;
+}
+.p-6 {
+  padding: 1px;
+}
+
+@media only screen and (max-width: 734px) {
+  #home {
+    font-size: 10px;
+  }
+  .device-card {
+    height: 500px;
+    background-color: #f5f5f7;
+  }
+}
+@media only screen and (max-width: 350px) {
+  #home {
+    font-size: 8px;
+  }
+  .device-card {
+    height: 400px;
+    background-color: #f5f5f7;
+  }
+}

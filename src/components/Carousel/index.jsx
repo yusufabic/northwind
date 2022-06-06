@@ -17,20 +17,21 @@ const Carousel = ({ slides }) => {
     <div className="carousel">
       {slides.map((slide, index) => {
         return (
-          <div key={index}>
-            {index === current && (
-              <img className="carousel-image" src={slide} alt="images" />
-            )}
-          </div>
+          <img
+            key={index}
+            className={`${index === current ? "d-block" : "d-none"}`}
+            src={slide}
+            alt="images"
+          />
         );
       })}
 
       <div className="d-flex justify-content-between px-5">
-        <div className="prev" onClick={() => prevSlide()}>
-          prev
+        <div className="prev btn btn-secondary" onClick={() => prevSlide()}>
+          Prev
         </div>
-        <div className="next" onClick={() => nextSlide()}>
-          next
+        <div className="next btn btn-secondary" onClick={() => nextSlide()}>
+          Next
         </div>
       </div>
     </div>

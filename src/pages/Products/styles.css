@@ -1,0 +1,13 @@
+@media screen and (max-width: 1119px) {
+  .card-product {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 733px) {
+  .card-product {
+    display: flex;
+    justify-content: center;
+  }
+}

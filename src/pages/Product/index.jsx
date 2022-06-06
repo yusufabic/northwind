@@ -8,15 +8,10 @@ import Detail from "../../components/Detail";
 import { fetchProduct } from "../../services";
 
 const Product = () => {
+  const [product, setProduct] = useState();
+
   const dispatch = useDispatch();
-
-  const _addToCart = (param) => {
-    dispatch(addToCart(param));
-    dispatch(setNotification({ show: true, message: "Added to cart" }));
-  };
   const { product_id } = useParams();
-
-  const [product, setProduct] = useState({});
 
   useEffect(() => {
     fetchProduct(product_id).then((result) => {
@@ -24,9 +19,16 @@ const Product = () => {
     });
   }, []);
 
+  const _addToCart = (param) => {
+    dispatch(addToCart(param));
+    dispatch(setNotification({ show: true, message: "Added to cart" }));
+  };
+
   return (
     <section id="page" className="center">
-      <Detail product={product} addToCart={(param) => _addToCart(param)} />
+      {product && (
+        <Detail product={product} addToCart={(param) => _addToCart(param)} />
+      )}
     </section>
   );
 };

@@ -3,7 +3,7 @@ import "./styles.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand navbar-light bg-light">
+    <nav className="navbar p-0 navbar-expand nav-color">
       <div className="container-fluid">
         <div className="navbar-brand">
           <Link to="/" className="nav-link">
@@ -22,7 +22,7 @@ const Navbar = () => {
                 Management
               </Link>
             </li>
-            <li className="nav-item pe-3">
+            <li className="nav-item">
               <Link to="/cart" className="nav-link">
                 Cart
               </Link>
