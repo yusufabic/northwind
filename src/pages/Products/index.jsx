@@ -7,12 +7,12 @@ import Card from "../../components/Card";
 import ListGroup from "../../components/ListGroup";
 import "./styles.css";
 
-const Products = () => {
+const Products = (props) => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [selectedProducts, setSelectedProducts] = useState([]);
-
+  const { id } = props.location.state;
   const dispatch = useDispatch();
   const history = useHistory();
   const onClick = (item) => {
@@ -40,6 +40,12 @@ const Products = () => {
       setSelectedProducts(result);
     }
   }, [selectedCategory]);
+
+  useEffect(() => {
+    if (id) {
+      setSelectedCategory(id);
+    }
+  }, [id]);
 
   return (
     <section id="products" className="page row">

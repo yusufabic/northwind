@@ -5,14 +5,15 @@
   cursor: pointer;
 }
 
-.color-back-g {
+.bg-gray {
   background-color: #fafafa;
 }
-.color-font-g {
+.text-gray {
   color: #fafafa;
+  text-decoration: none;
 }
 
-.color-back-d {
+.bg-black {
   background-color: #080808;
 }
 
@@ -42,6 +43,27 @@ div > h3 {
   color: #1d1d1f;
   font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
+}
+.link-home {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #2488ff;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.link-home:hover {
+  text-decoration: underline;
+  color: #2488ff;
+}
+.home-svg {
+  width: 0.55em;
+  height: auto;
+  margin-left: 0.3em;
 }
 
 .ipad-img {
