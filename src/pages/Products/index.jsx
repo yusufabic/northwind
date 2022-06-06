@@ -12,7 +12,7 @@ const Products = (props) => {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [selectedProducts, setSelectedProducts] = useState([]);
-  const { id } = props.location.state;
+  const id = props.location.state?.id;
   const dispatch = useDispatch();
   const history = useHistory();
   const onClick = (item) => {

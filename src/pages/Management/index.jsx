@@ -24,7 +24,6 @@ const Management = () => {
     fetchProductList().then((result) => {
       setProducts(result.data);
       setFilteredProducts(result.data);
-      console.log("YA ~ result.data", result.data);
     });
   }, []);
 
