@@ -27,17 +27,21 @@ const SignIn = ({ setIsLoggedIn }) => {
               history.push("/management");
             })
             .catch((e) => {
-              // TODO: Hata mesajının ekranda gözükmesi sağlanacak
               setErrorMessage(e.message);
-              console.log("YA ~ e.message", e.message);
             });
         }}
       >
         {({ errors, touched }) => (
           <Form>
             <h2 className="my-5 fw-bold">Sign In</h2>
+            {errorMessage && (
+              <div className="my-5 alert alert-danger text-dark">
+                {errorMessage}
+              </div>
+            )}
 
             <div>Email</div>
+
             <Field name="email" type="email" className="form-control" />
             <div className="error">
               {errors.email && touched.email ? (
@@ -52,7 +56,6 @@ const SignIn = ({ setIsLoggedIn }) => {
                 <div className="text-danger text-sm">{errors.password}</div>
               ) : null}
             </div>
-            <div className="mt-5 text-danger">{errorMessage}</div>
 
             <button type="submit" className="btn btn-primary mt-4">
               Sign In

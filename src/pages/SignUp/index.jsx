@@ -31,6 +31,12 @@ const SignUp = () => {
           <Form>
             <h2 className="my-5 fw-bold">Sign Up</h2>
 
+            {errorMessage && (
+              <div className="my-5 alert alert-danger text-dark">
+                {errorMessage}
+              </div>
+            )}
+
             <div>Email</div>
             <Field name="email" type="email" className="form-control" />
             <div className="error">
@@ -46,7 +52,6 @@ const SignUp = () => {
                 <div className="text-danger text-sm">{errors.password}</div>
               ) : null}
             </div>
-            <div className="mt-5 text-danger">{errorMessage}</div>
 
             <button type="submit" className="btn btn-primary mt-4">
               Sign Up
