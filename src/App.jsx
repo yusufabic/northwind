@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -11,9 +11,13 @@ import ProductDetail from "./pages/ProductDetail";
 import Management from "./pages/Management";
 import Edit from "./pages/Edit";
 import Add from "./pages/Add";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 import "./style/index.css";
 
 const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <BrowserRouter>
       <Navbar />
@@ -27,9 +31,15 @@ const App = () => {
         <Route path="/detail" component={ProductDetail} />
         <Route path="/product/:product_id" component={Product} />
         <Route path="/cart" component={Cart} />
-        <Route path="/management" component={Management} />
+        <Route path="/management">
+          {isLoggedIn ? <Management /> : <Redirect to="/signin" />}
+        </Route>
         <Route path="/edit" component={Edit} />
         <Route path="/add" component={Add} />
+        <Route path="/signin">
+          <SignIn setIsLoggedIn={setIsLoggedIn} />
+        </Route>
+        <Route path="/signup" component={SignUp} />
       </Switch>
       <Footer />
     </BrowserRouter>

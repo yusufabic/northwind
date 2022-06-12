@@ -22,9 +22,19 @@ const Navbar = () => {
                 Management
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item pe-3">
               <Link to="/cart" className="nav-link">
                 Cart
+              </Link>
+            </li>
+            <li className="nav-item pe-3">
+              <Link to="/signin" className="nav-link">
+                Sign In
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/signup" className="nav-link">
+                Sign Up
               </Link>
             </li>
           </ul>
